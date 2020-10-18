@@ -4,7 +4,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
-@SpringBootApplication(scanBasePackages = {"com.springboot"})
+@SpringBootApplication(scanBasePackages = {"com.springboot"},exclude={
+        org.activiti.spring.boot.SecurityAutoConfiguration.class
+})
 @MapperScan(value = "com.springboot.study")
 /**
  * 测试提交
